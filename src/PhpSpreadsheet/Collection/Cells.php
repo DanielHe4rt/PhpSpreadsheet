@@ -149,6 +149,7 @@ class Cells
      */
     public function getSortedCoordinates()
     {
+        dump(1);
         return $this->getCoordinates();
     }
 
