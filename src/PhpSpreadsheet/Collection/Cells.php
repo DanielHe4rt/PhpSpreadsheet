@@ -149,16 +149,7 @@ class Cells
      */
     public function getSortedCoordinates()
     {
-        $sortKeys = [];
-        foreach ($this->getCoordinates() as $coord) {
-            $column = '';
-            $row = 0;
-            sscanf($coord, '%[A-Z]%d', $column, $row);
-            $sortKeys[sprintf('%09d%3s', $row, $column)] = $coord;
-        }
-        ksort($sortKeys);
-
-        return array_values($sortKeys);
+        return $this->getCoordinates();
     }
 
     /**
